@@ -28,6 +28,7 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: 'Price is required',
     },
+    
 
 }, {
         timestamps: true,
@@ -44,5 +45,5 @@ const productSchema = new mongoose.Schema({
     })
 
 
-const Product = mongoose.model('Product', productSchema);
-module.exports = Product;
+const product = mongoose.model('Product', productSchema);
+module.exports = product;
