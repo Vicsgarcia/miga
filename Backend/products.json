@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Croissant",
+        "shortDescription": "Croissant de mantequilla",
+        "longDescription": "Croissant de mantequilla elaborado a mano y horneado a diario",
+        "photo": "URL" ,
+        "price": "1,5"
+    },
+    {
+        "name": "Napolitana de Chocolate",
+        "shortDescription": "Napolitana de Chocolate",
+        "longDescription": "Napolitana de Chocolate elaborada a mano y horneada a diario",
+        "photo": "URL" ,
+        "price": "1,5"
+    },
+    {
+        "name": "Napolitana de Crema",
+        "shortDescription": "Napolitana de Crema",
+        "longDescription": "Napolitana de Crema elaborada a mano y horneada a diario",
+        "photo": "URL" ,
+        "price": "1,5"
+    }
+
+]
