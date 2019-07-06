@@ -4,8 +4,9 @@ const prod = require ('../controllers/prod.controller')
 
 
 
-prodRouter.get('/', prod.list)
 prodRouter.get('/:id', prod.get)
+prodRouter.get('/', prod.list)
+
 
 
 
