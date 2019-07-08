@@ -1,5 +1,4 @@
 import React from 'react'
-import ProdService from '../services/ProdService';
 
 const Product = ({ name, photo, shortDescription, longDescription }) => {
 

@@ -22,7 +22,8 @@
     "multer": "^1.4.1",
     "multer-storage-cloudinary": "^2.2.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "react-responsive-carousel": "^3.1.49"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"

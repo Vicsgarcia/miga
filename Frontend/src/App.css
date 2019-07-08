@@ -34,10 +34,29 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.header{
+  width: 100%; 
+}
+
 .header-color{
   background-color:rgb(0,0,0,0);
   width: 100%;
+  
 }
+.navbar{
+  position: fixed !important;
+  z-index: 1 !important;
+}
+
+#root > div > div.header > div > div:nth-child(2) > div > ul{
+  display:none;
+}
+
+#root > div > div.header > div > div.carousel.carousel-slider > div > ul{
+  transition:10ms;
+}
+
 .header-text{
   color: #56260B;
   font-family: 'robotobold_condensed';
@@ -50,15 +69,29 @@ body{
   color: white;
   font-family: 'robotobold_condensed';
   text-align: right;
-  position: relative;
+  
 }
 
 .header-buttons{
   display: flex;
   justify-content:flex-end;
+  width: 100vw;
 }
 
 .header-logo{
   height: 60px;
   width: 60px;
+}
+
+.cards{
+  display: inline,
+}
+.product-card{
+  width: 30vw;
+  text-align: left;
+}
+
+.product-photo{
+  width: 30%;
+  height: 30%;
 }
