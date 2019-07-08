@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import list from '../services/ProdService';
-import { Link, Redirect } from 'react-router-dom'
+import ProdService from '../services/ProdService';
+//import { Link, Redirect } from 'react-router-dom'
 
 
 
@@ -18,12 +18,14 @@ class Product extends Component {
     isAuthenticated: false
   }
 
+  componentDidMount(){
+    ProdService.list()
+      .then(products=> console.log(products))
+  }
 
   render() {
     return (
-      <div className="App">
-        <Product name={this.state.Product.name} />
-      </div>
+      <h1>hola</h1>
     );
   }
 }

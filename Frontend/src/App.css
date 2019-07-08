@@ -31,3 +31,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+.header-color{
+  background-color:#56260B;
+}
+
+.header-text{
+  color: white;
+  font-family: 'robotobold_condensed';
+  text-align: left;
+  display: flex;
+  justify-content :space-around;
+}
+
+.header-nav{
+  color: white;
+  font-family: 'robotobold_condensed';
+  text-align: right;
+  position: relative;
+}

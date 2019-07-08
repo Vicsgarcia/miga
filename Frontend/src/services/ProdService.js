@@ -1,7 +1,8 @@
 
 import http from './BaseService';
 
-const list = (product) => http.get('/', product)
+
+const list = (product) => http.get('/products', product)
   .then(res => Promise.resolve(res.data));
 
 /*const authenticate = (user) => http.post('/authenticate', user)
