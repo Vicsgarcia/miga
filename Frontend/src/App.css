@@ -1,3 +1,6 @@
+body{
+  width: 100%;
+}
 .App {
   text-align: center;
 }
@@ -31,14 +34,12 @@
     transform: rotate(360deg);
   }
 }
-
-
 .header-color{
-  background-color:#56260B;
+  background-color:rgb(0,0,0,0);
+  width: 100%;
 }
-
 .header-text{
-  color: white;
+  color: #56260B;
   font-family: 'robotobold_condensed';
   text-align: left;
   display: flex;
@@ -50,4 +51,14 @@
   font-family: 'robotobold_condensed';
   text-align: right;
   position: relative;
+}
+
+.header-buttons{
+  display: flex;
+  justify-content:flex-end;
+}
+
+.header-logo{
+  height: 60px;
+  width: 60px;
 }

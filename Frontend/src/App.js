@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
 import {Switch, Route} from 'react-router-dom'
-import Product from './components/Product';
-import 'antd-mobile/dist/antd-mobile.css';
+import Header from './components/Header';
+import Product from './components/ProductsList';
+
 
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <Header />
+          <Header />       
         </div>
         <div className="container">
           <div className="row">
