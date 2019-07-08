@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Header from './components/Header';
-import Product from './components/ProductsList';
+import ProductList from './components/ProductsList';
 
 
 
@@ -19,7 +19,7 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <Switch>
-              <Route exact path='/' component={Product} />
+              <Route exact path='/' component={ProductList} />
             </Switch>
           </div>
         </div>

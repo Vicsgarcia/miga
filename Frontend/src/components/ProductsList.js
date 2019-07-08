@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import ProdService from '../services/ProdService';
-//import { Link, Redirect } from 'react-router-dom'
+import Product from './Product';
 
 
-
-class Product extends Component {
+class ProductList extends Component {
   state = {
     products: [],
     product: {
@@ -26,12 +25,14 @@ class Product extends Component {
 
   render() {
     return (
-      <h1>
-        hola
-        {JSON.stringify(this.state.products)}
-      </h1>
-    );
+      <div>
+        {this.state.products.map((product, i) => (
+          <Product {...product} key={i}/>
+        ))}
+      </div>
+    )
   }
 }
 
-export default Product;
+export default ProductList
+;
