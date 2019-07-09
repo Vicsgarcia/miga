@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
-import Header from './components/Header';
-import ProductList from './components/ProductsList';
-import Tiendas from './components/Tiendas';
-import Carousel from './components/Carousel';
+import Header from './components/misc/Header';
+import ProductList from './components/prod/ProductsList';
+import Tiendas from './components/misc/Tiendas';
+import Carousel from './components/misc/Carousel';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
 
 
 
@@ -24,6 +26,8 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={ProductList} />
               <Route exact path='/tiendas' component={Tiendas} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/login" component={Login} />
             </Switch>
           </div>
         </div>

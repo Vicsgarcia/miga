@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ProdService from '../services/ProdService';
+import ProdService from '../../services/ProdService';
 import Product from './Product';
 
 

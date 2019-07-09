@@ -16,7 +16,10 @@ function Header() {
                             <Link class="header-text mr-4" to="/tiendas">Tiendas</Link>
                         </li>
                         <li class="">
-                            <Link class="header-text mr-4" to="/productos">Productos</Link>
+                            <Link class="header-text mr-4" to="/Login">Login</Link>
+                        </li>
+                        <li class="">
+                            <Link class="header-text mr-4" to="/register">Regístrate</Link>
                         </li>
                     </ul>
                 </span>
