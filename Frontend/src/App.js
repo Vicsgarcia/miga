@@ -8,6 +8,7 @@ import Tiendas from './components/misc/Tiendas';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Home from './components/misc/Home';
+import Footer from './components/misc/Footer';
 
 
 
@@ -32,6 +33,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

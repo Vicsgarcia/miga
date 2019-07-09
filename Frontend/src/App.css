@@ -3,7 +3,6 @@ body{
 
 }
 
-
 .header{
   width: 100%; 
 }
@@ -20,6 +19,7 @@ body{
 .navbar{
   position: relative;
   z-index: 1 !important;
+  
 }
 
 .header-text{
@@ -62,9 +62,8 @@ body{
 }
 
 .carousel-photo{
-  max-width: 100%;
+  width: 100% !important;
   height: auto;
-  width: auto\9;
 }
 
 /*Quitar fotos de abajo del carrusel */
@@ -74,7 +73,7 @@ body{
 
 
 .cards{
-  display: inline,
+  display: block,
 }
 .product-card{
   width: 30vw;
@@ -112,4 +111,45 @@ body{
 .login-button:hover {
   background-color: white;
   color: #4CAF50;
+}
+
+
+.footer{
+  display: grid;
+  height:50%;
+  background-color: rgb(86,38,11,1);
+  color: white;
+
+}
+
+.firt-row{
+  columns: 100px 3;
+  text-align: center;
+
+}
+.second-row{
+  font-family: "Open Sans",sans-serif;
+  text-align: center;
+  
+}
+
+.footer-title{
+  font-family: "Open Sans",sans-serif;
+  font-size:2vw;
+}
+
+.footer-text{
+  font-family: "Open Sans",sans-serif;
+  font-size:1vw;
+}
+
+.footer-logo{
+  padding:30px;
+  max-width: 30%;
+  height: auto;
+}
+
+.footer-img{
+  max-width: 5%;
+  height: auto;
 }
