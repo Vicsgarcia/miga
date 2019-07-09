@@ -3,7 +3,10 @@ import http from './BaseService';
 
 
 const list = (product) => http.get('/products', product)
-  .then(res => Promise.resolve(res.data));
+  .then(res => res.data)
+
+const getProduct = (id) => http.get(`/products/${id}`)
+  .then(res => res.data)
 
 /*const authenticate = (user) => http.post('/authenticate', user)
   .then(res => Promise.resolve(res.data));
@@ -28,7 +31,8 @@ const logout = () => {
 */
 
 export default {
-  list
+  list,
+  getProduct
   /*authenticate,
   getProfile,
   updateProfile,
