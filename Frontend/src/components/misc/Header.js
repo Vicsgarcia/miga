@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 
+
+
 function Header() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light header-color ">
@@ -10,16 +12,19 @@ function Header() {
                 <span class=" ">
                     <ul class="navbar-nav ">
                         <li class=" ">
-                            <Link class="header-text mr-4" to="/">Home </Link>
+                            <Link class="header-text mr-4" to="/">HOME </Link>
                         </li>
                         <li class="">
-                            <Link class="header-text mr-4" to="/tiendas">Tiendas</Link>
+                            <Link class="header-text mr-4" to="/productos">PRODUCTOS</Link>
                         </li>
                         <li class="">
-                            <Link class="header-text mr-4" to="/Login">Login</Link>
+                            <Link class="header-text mr-4" to="/tiendas">TIENDAS</Link>
                         </li>
                         <li class="">
-                            <Link class="header-text mr-4" to="/register">Regístrate</Link>
+                            <Link class="header-text mr-4" to="/Login">LOGIN</Link>
+                        </li>
+                        <li class="">
+                            <Link class="header-text mr-4" to="/register">REGISTRO</Link>
                         </li>
                     </ul>
                 </span>
