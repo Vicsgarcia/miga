@@ -29,7 +29,7 @@ function Footer() {
                 <a target="_blank"  href="https://www.facebook.com/Migabakery">
                   <img className="footer-img" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Facebook_Home_logo_old.svg/768px-Facebook_Home_logo_old.svg.png"/>
                 </a>
-                <a target="_blank"  href="https://www.instahram.com/Migabakery">
+                <a target="_blank"  href="https://www.instagram.com/Migabakery">
                   <img className="footer-img" src="http://www.stickpng.com/assets/thumbs/580b57fcd9996e24bc43c521.png"/>
                 </a>
             </div>

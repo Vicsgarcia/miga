@@ -25,10 +25,12 @@ class ProductList extends Component {
 
   render() {
     return (
+      <div  className="vista">
       <div>
         {this.state.products.map((product, i) => (
           <Product {...product} key={i}/>
         ))}
+      </div>
       </div>
     )
   }

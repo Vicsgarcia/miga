@@ -17,8 +17,9 @@ body{
   box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
 }
 .navbar{
-  position: relative;
+  position: fixed ;
   z-index: 1 !important;
+  
   
 }
 
@@ -71,18 +72,73 @@ body{
   display:none;
 }
 
+.vista{
+  margin: 30px 0 0 0;
+}
+
 
 .cards{
-  display: block,
+  display: block;
+  padding: 5px;
+  margin-bottom: 18px!important;
+  box-sizing: border-box;
 }
 .product-card{
-  width: 30vw;
+  
+  width: 100%;
+  columns: 15px 2;
+  text-align: left; 
+  display: block;
+}
+
+.product-text{
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  color: #56260B;
+  font-size: 10px;
+  line-height: 1.5rem;
+  text-align: left;
+  
+}
+
+
+
+.photo-column{
+  display: inline-block;
+  column-width: 100%;
+}
+.product-photo{
+  display: block;
+  width: 30%;
+  height: 30%;
+}
+
+.product-short{
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  color: #56260B;
+  font-size: 16px;
+  line-height: 1.5rem;
   text-align: left;
 }
 
-.product-photo{
-  width: 30%;
-  height: 30%;
+.product-short:hover{
+  display: block;
+  font-family: "Open Sans",sans-serif;
+  color: rgba(86, 38, 11, 0.5);
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+
+.product-price{
+  display: block;
+}
+
+.product-long{
+  display: block;
 }
 
 

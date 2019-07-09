@@ -3,14 +3,12 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Header from './components/misc/Header';
 import ProductList from './components/prod/ProductsList';
+import Product from './components/prod/Product';
 import Tiendas from './components/misc/Tiendas';
-
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Home from './components/misc/Home';
 import Footer from './components/misc/Footer';
-
-
 
 class App extends Component {
 
@@ -27,6 +25,7 @@ class App extends Component {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/productos' component={ProductList} />
+              <Route exact path='/productos/:id' component={Product} />
               <Route exact path='/tiendas' component={Tiendas} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
