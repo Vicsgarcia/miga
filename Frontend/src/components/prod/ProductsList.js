@@ -11,7 +11,8 @@ class ProductList extends Component {
       shortDescription: "",
       longDescription:  "" ,
       photo:"",
-      price:""
+      price:"",
+      id:"",
     },
     errors: {},
     touch: {},
