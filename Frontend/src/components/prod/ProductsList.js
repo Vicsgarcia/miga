@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ProdService from '../../services/ProdService';
 import Product from './Product';
-import ProductDetail from './ProductDetail';
+
 
 class ProductList extends Component {
   state = {

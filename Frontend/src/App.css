@@ -1,3 +1,7 @@
+.App{
+  background-color: #FBE4A1;
+}
+
 body{
   width: 100%;
 
@@ -9,46 +13,70 @@ body{
 
 .header-color{
   width: 100%;
-  border-bottom-color: rgba(255,255,255,0.5);
+  border-bottom-color: #56260B;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   transform: translateZ(0);
-  background-color: #FFF;
+  background-color: #56260B;
   box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
 }
+
+
+
+
 .navbar{
-  position: fixed ;
-  z-index: 1 !important;
-  
-  
+  /*position: fixed !important; */
+  z-index: 1 !important; 
 }
 
 .header-text{
-  font-family: "Open Sans",sans-serif;
-  color: #56260B;
+  font-family: "Futura",sans-serif;
+  color: white;
   font-size: 16px;
   line-height: 1.5rem;
   text-align: left;
   display: flex;
   justify-content :space-around;
 }
+
+@media only screen and (max-width: 600px) {
+  .header-text {
+    font-size: 10px;
+    margin: -5px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-buttons {
+    margin: -50px 0 0 0;
+  }
+}
+
+
+
+
 .header-text:hover{
-  font-family: "Open Sans",sans-serif;
-  color: #56260B;
+  font-family: "Futura",sans-serif;
+  color: white;
   font-weight: bold;
   text-decoration:none;
-  font-size: 17px;
+  font-size: 1.3vw;
   line-height: 1.5rem;
   text-align: left;
   display: flex;
   justify-content :space-around;
 }
 
+@media only screen and (max-width: 600px) {
+  .header-text:hover{ 
+    font-size: 3vw;
+  } 
+}
+
 .header-nav{
   color: white;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   text-align: right;
-  
 }
 
 .header-buttons{
@@ -59,18 +87,161 @@ body{
 
 .header-logo{
   height: 60px;
-  width: 60px;
+  width: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-logo {
+    margin: 20px 0 -20px 0;
+  }
 }
 
 .carousel-photo{
   width: 100% !important;
   height: auto;
 }
+@media only screen and (max-width: 600px) {
+  .carousel-photo{
+    height: 100%;
+    width: auto;
+  }
+}
 
 /*Quitar fotos de abajo del carrusel */
 #root > div > div.header > div > div:nth-child(2) > div > ul{
   display:none;
 }
+
+
+/*philosophy*/
+
+.philosophy{
+ 
+}
+
+
+.philosophy-block{
+  columns: 100px 2;
+  margin: 2vw 0;
+  
+}
+@media only screen and (max-width: 600px) {
+  .philosophy-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.philosophy-second-column{
+  text-align: center;
+  padding: 5% 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .philosophy-second-column{
+    text-align: center;
+    padding: 0 0 0 0;
+  }
+}
+
+.philosophy-first-column{
+  display: block
+}
+
+.philosophy-column{
+  columns: 100px 2;
+}
+
+.philosophy-texts{
+  margin:2vw 0 0 0;
+}
+@media only screen and (max-width: 600px) {
+  .philosophy-texts{
+    text-align: center;
+    padding: 0 0 0 0;
+    font-size: 16px;
+  }
+}
+
+.our-philosophy-photo{
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px 0 rgba(49,52,57,.3),
+}
+
+.philosophy-title{
+  display: block;
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 2vw;
+  line-height: 1.5rem;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .philosophy-tile{ 
+    font-size: 4vw;
+  } 
+}
+
+
+
+.philosophy-subsubtitle{
+  display: block;
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1vw;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .philosophy-subsubtitle{ 
+    font-size: 2.5vw;
+  } 
+}
+
+.philosophy-text{
+  display: block;
+  font-family: "Futura",sans-serif;
+  color: rgba(86, 38, 11, 0.605);
+  font-size: 0.9vw;
+  line-height: 1rem;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .philosophy-text{ 
+    font-size: 2vw;
+  } 
+}
+
+
+/*PRODUCTOS EN LA HOME*/
+
+.home-text{
+  display: block;
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 2vw;
+  line-height: 1.5rem;
+  text-align: center;
+  padding: 2vw 0 0 0;
+  text-decoration: underline
+}
+
+@media only screen and (max-width: 600px) {
+  .home-text{ 
+    font-size: 4vw;
+  } 
+}
+
+
+
+/*PRODUCTOS*/
 
 .vista{
   margin: 30px 0 0 0;
@@ -91,40 +262,83 @@ body{
   display: block;
 }
 
-.product-text{
-  display: block;
-  font-family: "Open Sans",sans-serif;
-  color: #56260B;
-  font-size: 10px;
-  line-height: 1.5rem;
-  text-align: left;
-  
+@media only screen and (max-width: 600px) {
+  .product-card{ 
+    display: flex;
+    align-items: flex-start;
+  } 
 }
 
-
+.product-text{
+  display: block;
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1.1vw;
+  line-height: 1.5rem;
+  text-align: left; 
+  margin: 0 0 0 -200px;
+}
+@media only screen and (max-width: 600px) {
+  .product-text{ 
+    font-size: 3vw;
+    line-height: 0.75rem;
+    margin: 0 0 0 -80px;
+  } 
+}
 
 .photo-column{
   display: inline-block;
-  column-width: 100%;
+  column-width: auto;
+}
+@media only screen and (max-width: 600px) {
+  .photo-column{ 
+    margin: 0 -35px 0 0;
+    border:  0 -35px 0 0;
+  } 
 }
 .product-photo{
-  display: block;
-  width: 30%;
-  height: 30%;
+  display: inline;
+  width: 40%;
+  height: auto;
+  margin: 0 0 0 15px;
+}
+@media only screen and (max-width: 600px) {
+  .product-photo{ 
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  } 
 }
 
 .product-short{
   display: block;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   color: #56260B;
-  font-size: 16px;
   line-height: 1.5rem;
   text-align: left;
 }
 
+@media only screen and (max-width: 600px) {
+  .product-short{ 
+    font-size: 1vw;
+  } 
+}
+
+.product-h5{
+  font-size: 1.6vw;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .product-h5{ 
+    font-size: 4.5vw;
+    font-weight: normal;
+  } 
+}
+
 .product-short:hover{
   display: block;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   color: rgba(86, 38, 11, 0.5);
   font-size: 16px;
   text-decoration: none;
@@ -137,46 +351,60 @@ body{
   display: block;
 }
 
+@media only screen and (max-width: 600px) {
+  .product-price{ 
+    font-size: 3vw;
+  } 
+}
+
 .product-long{
   display: block;
 }
 
 
+/*LOGIN AND REGISTER*/
+
 .register-button{
-    background-color: #4CAF50;
+    background-color: #56260B;;
     padding: 10px 24px;
     border-radius: 4px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #56260B;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+    color: white;
+    
 }
 .register-button:hover {
     background-color: white;
-    color: #4CAF50;
+    color: #56260B;
 }
 
 
 .login-button{
-  background-color: #4CAF50;
+  background-color: #56260B;
   padding: 10px 24px;
   border-radius: 4px;
-  border: 2px solid #4CAF50;
+  border: 2px solid #56260B;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  color: white;
 }
 .login-button:hover {
   background-color: white;
-  color: #4CAF50;
+  color: #56260B;
 }
 
+
+/*FOOTER*/
 
 .footer{
   display: grid;
   height:50%;
   background-color: rgb(86,38,11,1);
   color: white;
-
 }
+
+
 
 .firt-row{
   columns: 100px 3;
@@ -184,18 +412,18 @@ body{
 
 }
 .second-row{
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   text-align: center;
   
 }
 
 .footer-title{
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   font-size:2vw;
 }
 
 .footer-text{
-  font-family: "Open Sans",sans-serif;
+  font-family: "Futura",sans-serif;
   font-size:1vw;
 }
 
@@ -209,3 +437,93 @@ body{
   max-width: 5%;
   height: auto;
 }
+
+
+/*TIENDAS*/
+
+.tienda-rows{
+  columns: 100px 2;
+  text-align: center;
+}
+
+.texto{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-weight: normal ;
+  text-decoration:none;
+  font-size: 1.3vw;
+  line-height: 1.5rem;
+  text-align: left;
+  display: flex;
+  justify-content :space-around;
+}
+
+.tienda-title{
+  font-size: 2.5vw;
+  margin: 35px 0 ;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .tienda-title{ 
+    font-size: 4.5vw;
+    margin: 15px 0 -15px 0;
+  } 
+}
+
+.tienda-parrafo{
+  font-size: 1.3vw;
+  margin: 30px 0 ;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .tienda-parrafo{ 
+    font-size: 3vw;
+    margin: 15px;
+  } 
+}
+
+.tienda-image{
+  width:80%;
+  height: auto;
+}
+@media only screen and (max-width: 600px) {
+  .tienda-image{ 
+   
+    width:80%;
+    height: auto;
+  } 
+}
+
+
+.shop-box{
+  margin: 15px 0 0 0;
+  padding: 0px;
+  
+
+}
+
+.shop-title{
+  font-size: 2vw;
+  text-decoration: underline;
+} 
+@media only screen and (max-width: 600px) {
+  .shop-title{ 
+    font-size: 4vw;
+    line-height: 1.5rem;
+  } 
+}
+
+.shop-text{
+
+}
+
+@media only screen and (max-width: 600px) {
+  .shop-text{ 
+    font-size: 3.5vw;
+    line-height: 0rem;
+  } 
+}
+

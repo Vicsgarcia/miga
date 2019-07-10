@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function Header() {
     return (
         <nav class="navbar navbar-expand-lg navbar-light header-color ">
-            <Link class="header-text mr-4" to="/"> <img src="/logo.png" class="header-logo"/> </Link>
+            <Link class="header-text mr-4" to="/"> <img src="https://i.ibb.co/k269vzR/whitelogo.png" class="header-logo"/> </Link>
             <div class=" header-buttons" id="navbarText">
                 <span class=" ">
                     <ul class="navbar-nav ">
@@ -25,6 +25,9 @@ function Header() {
                         </li>
                         <li class="">
                             <Link class="header-text mr-4" to="/register">REGISTRO</Link>
+                        </li>
+                        <li class="">
+                            <Link class="header-text mr-4" to="/carrito">CARRITO</Link>
                         </li>
                     </ul>
                 </span>
