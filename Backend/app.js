@@ -16,6 +16,7 @@ const cors = require('./configs/cors.config');
 //require route
 const authRouter = require('./routes/auth.routes');
 const prodRouter = require('./routes/prod.routes');
+const cartRouter = require('./routes/cart.routes');
 
 const app = express();
 
@@ -30,6 +31,8 @@ app.use(passport.session());
 
 app.use('/', authRouter);
 app.use('/products', prodRouter);
+app.use('/products/:id', cartRouter);
+
 
 // 404
 app.use(function (req, res, next) {

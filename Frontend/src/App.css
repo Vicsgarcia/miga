@@ -1,16 +1,29 @@
 .App{
   background-color: #FBE4A1;
+  width: 100%;
 }
 
 body{
   width: 100%;
-
+  margin: auto;
 }
 
 .header{
-  width: 100%; 
+  width: 100%;
+  margin: auto; 
 }
 
+@media only screen and (max-width: 600px) {
+  .header {
+   width: 100%;
+   height: auto;
+  }
+}
+
+.homeWindows{
+  width: 100%;
+  margin: auto;
+}
 .header-color{
   width: 100%;
   border-bottom-color: #56260B;
@@ -21,46 +34,68 @@ body{
   box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
 }
 
-
+.header-buttons{
+  margin-top: 10px ;
+  margin-right: 20px;
+  align-items: right;
+}
+@media only screen and (max-width: 600px) {
+  .header-buttons {
+    
+  }
+}
 
 
 .navbar{
-  /*position: fixed !important; */
-  z-index: 1 !important; 
+  display: flex;
+  align-items: row;
+  z-index: 1 !important;
+  align-items: right;
+   
 }
+
+
+.nav-menu{
+  display:flex;
+  flex-direction: row;
+  margin-right: 10px;  
+}
+@media only screen and (max-width: 600px) {
+  .nav-menu {
+   display: flex;
+   flex-direction: column;
+
+   
+  }
+}
+
 
 .header-text{
   font-family: "Futura",sans-serif;
   color: white;
   font-size: 16px;
   line-height: 1.5rem;
-  text-align: left;
+  text-align: center;
   display: flex;
   justify-content :space-around;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {
   .header-text {
-    font-size: 10px;
+    font-size: 3vw;
     margin: -5px 0 0 0;
+   
   }
 }
-
-@media only screen and (max-width: 600px) {
-  .header-buttons {
-    margin: -50px 0 0 0;
-  }
-}
-
-
 
 
 .header-text:hover{
   font-family: "Futura",sans-serif;
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   text-decoration:none;
-  font-size: 1.3vw;
+  font-size: 1.35vw;
   line-height: 1.5rem;
   text-align: left;
   display: flex;
@@ -69,8 +104,10 @@ body{
 
 @media only screen and (max-width: 600px) {
   .header-text:hover{ 
-    font-size: 3vw;
+    font-size: 3.5vw;
+    text-decoration: underline
   } 
+
 }
 
 .header-nav{
@@ -85,25 +122,48 @@ body{
   width: 100vw;
 }
 
+@media only screen and (max-width: 600px) {
+  .header-buttons {
+    margin-top: -5px;
+  }
+}
+
+
+.logo-box{
+
+}
+
+@media only screen and (max-width: 600px) {
+  .logo-box {
+    align-items: center;
+    margin-top:7.5%;
+    margin-left:7.5%;
+  }
+}
+
 .header-logo{
-  height: 60px;
+  height: 70px;
   width: auto;
+  margin-top:10%;
+  margin-bottom:20%;
+  margin-left:40%;
 }
 
 @media only screen and (max-width: 600px) {
   .header-logo {
-    margin: 20px 0 -20px 0;
   }
 }
 
+
+
 .carousel-photo{
-  width: 100% !important;
+  width: 100%;
   height: auto;
 }
 @media only screen and (max-width: 600px) {
   .carousel-photo{
-    height: 100%;
-    width: auto;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -116,7 +176,8 @@ body{
 /*philosophy*/
 
 .philosophy{
- 
+ width: 85%;
+ margin: auto;
 }
 
 
@@ -172,6 +233,7 @@ body{
 }
 
 .philosophy-title{
+
   display: block;
   font-family: "Futura",sans-serif;
   color: #56260B;
@@ -229,7 +291,8 @@ body{
   font-size: 2vw;
   line-height: 1.5rem;
   text-align: center;
-  padding: 2vw 0 0 0;
+  margin-top: 10%;
+  margin-bottom: 5%;
   text-decoration: underline
 }
 
@@ -249,14 +312,17 @@ body{
 
 
 .cards{
+  width: 80%;
+  margin: auto;
   display: block;
-  padding: 5px;
   margin-bottom: 18px!important;
   box-sizing: border-box;
 }
 .product-card{
   
-  width: 100%;
+  width: 70%;
+  margin: auto;
+  margin-top: 5%;
   columns: 15px 2;
   text-align: left; 
   display: block;
@@ -264,6 +330,7 @@ body{
 
 @media only screen and (max-width: 600px) {
   .product-card{ 
+
     display: flex;
     align-items: flex-start;
   } 

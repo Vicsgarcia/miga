@@ -6,31 +6,31 @@ import { Link } from 'react-router-dom'
 
 function Header() {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light header-color ">
-            <Link class="header-text mr-4" to="/"> <img src="https://i.ibb.co/k269vzR/whitelogo.png" class="header-logo"/> </Link>
-            <div class=" header-buttons" id="navbarText">
-                <span class=" ">
-                    <ul class="navbar-nav ">
-                        <li class=" ">
-                            <Link class="header-text mr-4" to="/">HOME </Link>
-                        </li>
-                        <li class="">
-                            <Link class="header-text mr-4" to="/productos">PRODUCTOS</Link>
-                        </li>
-                        <li class="">
-                            <Link class="header-text mr-4" to="/tiendas">TIENDAS</Link>
-                        </li>
-                        <li class="">
-                            <Link class="header-text mr-4" to="/Login">LOGIN</Link>
-                        </li>
-                        <li class="">
-                            <Link class="header-text mr-4" to="/register">REGISTRO</Link>
-                        </li>
-                        <li class="">
-                            <Link class="header-text mr-4" to="/carrito">CARRITO</Link>
-                        </li>
-                    </ul>
-                </span>
+        <nav className="navbar header-color header">
+            <div className="logo-box">
+                <Link className="header-text " to="/"> <img src="https://i.ibb.co/k269vzR/whitelogo.png" className="header-logo" alt="logo miga bakery" /> </Link>
+            </div>
+            <div className=" header-buttons" id="navbarText">
+                <ul className="nav-menu">
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/">HOME </Link>
+                    </li>
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/productos">PRODUCTOS</Link>
+                    </li>
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/tiendas">TIENDAS</Link>
+                    </li>
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/Login">LOGIN</Link>
+                    </li>
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/register">REGISTRO</Link>
+                    </li>
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/carrito">CARRITO</Link>
+                    </li>
+                </ul>
             </div>
         </nav>
     )

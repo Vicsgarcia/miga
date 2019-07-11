@@ -1,9 +1,9 @@
 
-import React, { Component, Fragment } from 'react'
-import { Link, Redirect } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import ProdService from '../../services/ProdService';
 
-class ProductDetails extends Component {
+class ProductDetail extends Component {
     state = {
         products: [],
         product: {
@@ -19,11 +19,13 @@ class ProductDetails extends Component {
         isAuthenticated: false
       }
 
-    componentDidMount() {
+    componentWillMount() {
         const { id } = this.props.match.params;
         ProdService.getProduct(id)
             .then(
-                product => this.setState({ product }),
+                product => {
+                  console.log(product)
+                  this.setState({ product })},
                 error => {
                     console.error(error);
                     if (error.response && error.response.status === 404) {
@@ -34,7 +36,7 @@ class ProductDetails extends Component {
     }
 
   render() {
-    const { name, price, photo, shortDescription, longDescription, id } = this.state;
+    const { name, price, photo, shortDescription, longDescription, id } = this.state.product;
     return (
         <div className="cards">
         <div className="product-card">
@@ -42,10 +44,13 @@ class ProductDetails extends Component {
                 <img src={photo} className="product-photo" alt="Foto de producto" />
             </div>
             <div className="product-text">
-              <h5 >{shortDescription}</h5>
+              <h5>{shortDescription}</h5>
               <h5 className="product-price">{price}€</h5>
               <p className="product-long">{longDescription}</p>
               
+              <button className="" form="register-form" type="submit" > 
+                <Link className="add-to-cart-button" to={`/product/${id}/carrito`}>Añadir al Carrito</Link>
+              </button>              
             </div>
 
         </div>
@@ -58,4 +63,4 @@ class ProductDetails extends Component {
   }
 }
 
-export default ProductDetails;
+export default ProductDetail;

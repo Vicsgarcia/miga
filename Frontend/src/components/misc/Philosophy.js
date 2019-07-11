@@ -24,11 +24,11 @@ function Philosophy() {
                         </div>
                         <div className="philosophy-column">
                             <div className="philosophy-box">
-                                <h5 className="philosophy-subsubtitle"></h5>
+                                
                                 <p className="philosophy-text">Todo ello cocido en horno refractario de solera, dando a cada pan un sabor y textura que nos devuelve a sensaciones del pasado.</p>
                             </div>
                             <div className="philosophy-box">
-                                <h5 className="philosophy-subsubtitle"></h5>
+                                
                                 <p className="philosophy-text">Solo utilizamos masas madres propias, con largas fermentaciones y reposos sobre las telas de nilo. </p>
                             </div>
                         </div>

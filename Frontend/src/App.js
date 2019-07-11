@@ -3,7 +3,7 @@ import './App.css';
 import {Switch, Route} from 'react-router-dom'
 import Header from './components/misc/Header';
 import ProductList from './components/prod/ProductsList';
-import ProductDetail from './components/prod/Product';
+import ProductDetail from './components/prod/ProductDetail';
 import Carrito from './components/prod/Carrito';
 import Tiendas from './components/misc/Tiendas';
 import Register from './components/auth/Register';
@@ -21,12 +21,13 @@ class App extends Component {
         <div className="header">
           <Header />              
         </div>
-        <div className="container">
+        <div className="homeWindows">
           <div className="row">
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/productos' component={ProductList} />
               <Route exact path='/product/:id' component={ProductDetail} />
+              <Route exact path='/product/:id/carrito' component={Carrito} />
               <Route exact path='/tiendas' component={Tiendas} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
