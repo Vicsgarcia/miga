@@ -27,12 +27,15 @@ class Login extends Component {
   state = {
     user: {
       email: '',
-      password: ''
+      password: '',
+      id:'',
     },
     errors: {},
     touch: {},
     isAuthenticated: false
   }
+
+  
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -58,17 +61,13 @@ class Login extends Component {
     })
   }
 
-
+ 
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.isValid()) {
       authService.authenticate(this.state.user)
         .then(
-          (user) => {
-            this.setState({ isAuthenticated: true }, () => {
-              this.props.onUserChange(user);
-            })
-          },
+          (user) => this.setState({ isAuthenticated: true }),
           (error) => {
             const { message, errors } = error.response.data;
             this.setState({
@@ -86,12 +85,13 @@ class Login extends Component {
   isValid = () => {
     return !Object.keys(this.state.user)
       .some(attr => this.state.errors[attr])
+     
   }
 
   render() {
     const { isAuthenticated, errors, user, touch } =  this.state;
     if (isAuthenticated) {
-      return (<Redirect to="/" />)
+      return (<Redirect to={`/carrito`}/>)
     }
 
     return (

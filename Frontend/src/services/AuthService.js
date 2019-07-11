@@ -3,7 +3,7 @@ import http from './BaseService';
 const register = (user) => http.post('/register', user)
   .then(res => Promise.resolve(res.data));
 
-const authenticate = (user) => http.post('/authenticate', user)
+const authenticate = (id) => http.post('/authenticate', id)
   .then(res => Promise.resolve(res.data));
 
 /*

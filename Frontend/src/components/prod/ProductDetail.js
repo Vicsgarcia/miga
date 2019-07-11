@@ -36,7 +36,7 @@ class ProductDetail extends Component {
     }
 
   render() {
-    const { name, price, photo, shortDescription, longDescription, id } = this.state.product;
+    const { price, photo, shortDescription, longDescription, id } = this.state.product;
     return (
         <div className="cards">
         <div className="product-card">

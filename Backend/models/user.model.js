@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
     required: 'Password is required',
     match: [PASSWORD_PATTERN, 'Passwords must contain at least six characters, including uppercase, lowercase letters and numbers.']
   },
+  
  /* avatarURL: {
     type: String,
     match: [URL_PATTERN, 'Invalid avatar URL pattern']
