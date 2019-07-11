@@ -102,11 +102,11 @@ export default class Register extends Component {
           <div className="col-15">
             <h3>Regístrate</h3>
             <form id="register-form" className="mt-4" onSubmit={this.handleSubmit}>
-            <div className="form-group">
+            {/* <div className="form-group">
                 <label>¿Cómo te llamas?</label>
                 <input type="name" name="name" className={`form-control ${touch.name && errors.name ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.name} />
-                <div className="invalid-feedback">{ errors.nsme }</div>
-              </div>
+                <div className="invalid-feedback">{ errors.name }</div>
+              </div>*/}
               <div className="form-group">
                 <label>¿Cúal es tu email?</label>
                 <input type="email" name="email" className={`form-control ${touch.email && errors.email ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.email} />

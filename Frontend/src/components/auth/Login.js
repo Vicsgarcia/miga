@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import authService from '../../services/AuthService'
-import { withAuthConsumer } from '../../contexts/AuthStore';
+import AuthService from '../../services/AuthService'
+import { AuthStore, AuthContext, withAuthConsumer } from '../../contexts/AuthStore';
 const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 const validations = {
@@ -28,14 +28,15 @@ class Login extends Component {
     user: {
       email: '',
       password: '',
-      id:'',
+     
     },
     errors: {},
     touch: {},
     isAuthenticated: false
   }
 
-  
+
+
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -61,26 +62,32 @@ class Login extends Component {
     })
   }
 
- 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    if (this.isValid()) {
-      authService.authenticate(this.state.user)
-        .then(
-          (user) => this.setState({ isAuthenticated: true }),
-          (error) => {
-            const { message, errors } = error.response.data;
-            this.setState({
-              errors: {
-                ...this.state.errors,
-                ...errors,
-                password: !errors && message
-              }
-            })
-          }
-        )
-    }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const { user } = this.state
+    AuthService.authenticate(user)
+      .then(
+        response => {
+          this.props.onUserLogin(response)
+          this.setState({ 
+            isAuthenticated: true,
+            id: user.id
+          })
+        },
+        error => {
+          this.setState({
+            ...this.state,
+            errors: {
+              ...this.state.errors,
+              name: true,
+              password: true
+            },
+          })
+      }
+      )
   }
+
+
 
   isValid = () => {
     return !Object.keys(this.state.user)
@@ -89,9 +96,9 @@ class Login extends Component {
   }
 
   render() {
-    const { isAuthenticated, errors, user, touch } =  this.state;
+    const { isAuthenticated, errors, id, user, touch } =  this.state;
     if (isAuthenticated) {
-      return (<Redirect to={`/carrito`}/>)
+      return (<Redirect to={`/${this.state.id}`}/>)
     }
 
     return (

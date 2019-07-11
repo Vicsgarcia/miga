@@ -6,10 +6,10 @@ const PASSWORD_PATTERN = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
 //const URL_PATTERN = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
 
 const userSchema = new mongoose.Schema({
-  name: {
+  /*name: {
     type: String,
     required: 'Name is required',
-  },
+  },*/
   email: {
     type: String,
     required: 'Email is required',
