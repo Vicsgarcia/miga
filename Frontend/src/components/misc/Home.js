@@ -14,7 +14,7 @@ function Home() {
                 <Carousel />
             </div>
             <h2 className="home-text">Nuestra filosofía</h2>
-            <div className="philosophy">
+            <div className=''>
                 <Philosophy />
             </div>
             <div className="">

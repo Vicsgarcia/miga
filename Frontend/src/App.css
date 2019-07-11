@@ -162,6 +162,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
   .carousel-photo{
+    display: none;
     width: 100%;
     height: auto;
   }
@@ -178,6 +179,12 @@ body{
 .philosophy{
  width: 85%;
  margin: auto;
+}
+@media only screen and (max-width: 600px) {
+  .philosophy {
+    width: 90%;
+    height: auto;
+  }
 }
 
 
@@ -197,7 +204,7 @@ body{
 
 .philosophy-second-column{
   text-align: center;
-  padding: 5% 0 0 0;
+  padding-top: 5%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -215,6 +222,13 @@ body{
   columns: 100px 2;
 }
 
+@media only screen and (max-width: 600px) {
+  .philosophy-column{
+    columns: 50% 2;
+  }
+}
+
+
 .philosophy-texts{
   margin:2vw 0 0 0;
 }
@@ -229,6 +243,7 @@ body{
 .our-philosophy-photo{
   max-width: 100%;
   height: auto;
+  align-items: center;
   box-shadow: 0 10px 30px 0 rgba(49,52,57,.3),
 }
 
@@ -244,8 +259,10 @@ body{
 }
 
 @media only screen and (max-width: 600px) {
-  .philosophy-tile{ 
-    font-size: 4vw;
+  .philosophy-title{ 
+  display: block;
+  font-size: 3.5vw;
+  padding-top:10%;
   } 
 }
 
@@ -262,7 +279,10 @@ body{
 
 @media only screen and (max-width: 600px) {
   .philosophy-subsubtitle{ 
-    font-size: 2.5vw;
+    font-size: 3vw;
+    text-decoration: underline;
+    margin: auto;
+    padding-top: 10%;
   } 
 }
 
@@ -277,7 +297,8 @@ body{
 
 @media only screen and (max-width: 600px) {
   .philosophy-text{ 
-    font-size: 2vw;
+    font-size: 3vw;
+    text-align: justify;
   } 
 }
 
@@ -299,6 +320,7 @@ body{
 @media only screen and (max-width: 600px) {
   .home-text{ 
     font-size: 4vw;
+    padding-bottom: 5%;
   } 
 }
 
@@ -492,44 +514,113 @@ body{
 /*FOOTER*/
 
 .footer{
-  display: grid;
-  height:50%;
-  background-color: rgb(86,38,11,1);
-  color: white;
-}
-
-
-
-.firt-row{
   columns: 100px 3;
   text-align: center;
+  background-color: rgb(86,38,11,1);
+  color: white;
+  padding-top: 2%;
+  padding-bottom:4%;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer{ 
+  padding-top: 5%;
+  padding-bottom:7%;
+  } 
+}
+
+
+.footer-firt-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
 }
-.second-row{
-  font-family: "Futura",sans-serif;
-  text-align: center;
+@media only screen and (max-width: 600px) {
+  .footer-firt-column{ 
+    
+    margin-top:-10%;
+  } 
+}
+
+
+
+.footer-second-column{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin:auto;
+  padding: auto;
   
 }
+@media only screen and (max-width: 600px) {
+  .footer-second-column{ 
+    margin:auto;
+    
+  } 
+}
+
+
+.footer-third-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+@media only screen and (max-width: 600px) {
+  .footer-third-column{ 
+  } 
+}
+
 
 .footer-title{
   font-family: "Futura",sans-serif;
   font-size:2vw;
 }
+@media only screen and (max-width: 600px) {
+  .footer-title{ 
+    font-size:2.5vw;
+  } 
+}
 
 .footer-text{
+  
   font-family: "Futura",sans-serif;
   font-size:1vw;
 }
-
-.footer-logo{
-  padding:30px;
-  max-width: 30%;
-  height: auto;
+@media only screen and (max-width: 600px) {
+  .footer-text{ 
+    font-size:2vw;
+  } 
 }
 
-.footer-img{
-  max-width: 5%;
+.footer-logo{
+  
+  width: 20%;
   height: auto;
+  align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-logo{ 
+    margin: auto;
+    width: 30%;
+  } 
+}
+
+.social-block{
+
+}
+
+.social-img{
+  max-width: 10%;
+  height: auto;
+  margin-left:5%;
+  margin-right:5%;
+  margin-top:2%;
 }
 
 
