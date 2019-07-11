@@ -18,6 +18,7 @@ const authRouter = require('./routes/auth.routes');
 const prodRouter = require('./routes/prod.routes');
 const cartRouter = require('./routes/cart.routes');
 
+
 const app = express();
 
 app.use(logger('dev'));
@@ -32,6 +33,7 @@ app.use(passport.session());
 app.use('/', authRouter);
 app.use('/products', prodRouter);
 app.use('/products/:id', cartRouter);
+app.use('/profile/:id', authRouter);
 
 
 // 404

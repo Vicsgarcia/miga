@@ -4,12 +4,7 @@ import authService from '../../services/AuthService'
 const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 const validations = {
-    name: (value) => {
-        let message;
-        if (!value) {
-            message = 'Name is required';
-        } return message ;
-    },
+
     email: (value) => {
         let message;
         if (!value) {
@@ -31,7 +26,6 @@ const validations = {
 export default class Register extends Component {
   state = {
     user: {
-          name: '',
           email: '',
           password: '',
     },
@@ -41,25 +35,25 @@ export default class Register extends Component {
   }
 
   handleChange = (event) => {
-    const { name, value } = event.target;
+    const { email, value } = event.target;
     this.setState({
-      user: {
+      email: {
         ...this.state.user,
-        [name]: value
+        [email]: value
       },
       errors: {
         ...this.state.errors,
-        [name]: validations[name] && validations[name](value)
+        [email]: validations[email] && validations[email](value)
       }
     })
   }
 
   handleBlur = (event) => {
-    const { name } = event.target;
+    const { email } = event.target;
     this.setState({
       touch: {
         ...this.state.touch,
-        [name]: true
+        [email]: true
       }
     })
   }

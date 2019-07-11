@@ -3,14 +3,15 @@ import http from './BaseService';
 const register = (user) => http.post('/register', user)
   .then(res => Promise.resolve(res.data));
 
-const authenticate = (id) => http.post('/authenticate', id)
+const login = (id) => http.post(`/profile/${id}`, id)
+  .then(res => Promise.resolve(res.data));
+
+const getProfile = (user) => http.get(`/profile/carrito`, user)
   .then(res => Promise.resolve(res.data));
 
 /*
-
 const getProfile = () => http.get('/profile')
   .then(res => Promise.resolve(res.data));
-
 const updateProfile = (user) => {
   const data = new FormData();
   Object.keys(user).forEach(prop => {
@@ -20,17 +21,15 @@ const updateProfile = (user) => {
   return http.put('/profile', data)
     .then(res => Promise.resolve(res.data));
 }
-
 const logout = () => {
   return http.get('/logout')
     .then(res => Promise.resolve(res.data));
 }
-
 */
 export default {
   register,
-  authenticate,
-  /*getProfile,
+  login,
+  getProfile,/*
   updateProfile,
   logout*/
 }

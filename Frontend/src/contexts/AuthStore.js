@@ -41,5 +41,3 @@ const withAuthConsumer = (WrappedComponent) => {
 
 export { AuthStore, AuthContext, withAuthConsumer }
 
-
-
