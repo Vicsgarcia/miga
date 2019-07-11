@@ -313,15 +313,24 @@ body{
 
 .cards{
   width: 80%;
+  height: auto;
   margin: auto;
   display: block;
   margin-bottom: 18px!important;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 600px) {
+  .cards{ 
+    width: 95%;
+    height: 110%;
+  } 
+}
+
+
+
 .product-card{
   
-  width: 70%;
-  margin: auto;
+  width: 100%;
   margin-top: 5%;
   columns: 15px 2;
   text-align: left; 
@@ -330,7 +339,8 @@ body{
 
 @media only screen and (max-width: 600px) {
   .product-card{ 
-
+    width: 100%;
+    height: auto;
     display: flex;
     align-items: flex-start;
   } 
@@ -349,7 +359,10 @@ body{
   .product-text{ 
     font-size: 3vw;
     line-height: 0.75rem;
-    margin: 0 0 0 -80px;
+    margin-top:-10%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
   } 
 }
 
@@ -359,6 +372,8 @@ body{
 }
 @media only screen and (max-width: 600px) {
   .photo-column{ 
+    width: 80%;
+    height: auto;
     margin: 0 -35px 0 0;
     border:  0 -35px 0 0;
   } 
@@ -371,7 +386,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
   .product-photo{ 
-    width: 50%;
+    width: 70%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -389,8 +404,17 @@ body{
 @media only screen and (max-width: 600px) {
   .product-short{ 
     font-size: 1vw;
+    margin: 1%
   } 
 }
+
+@media only screen and (max-width: 600px) {
+  .product-long{ 
+    text-align: left;
+  } 
+}
+
+
 
 .product-h5{
   font-size: 1.6vw;
@@ -400,6 +424,7 @@ body{
   .product-h5{ 
     font-size: 4.5vw;
     font-weight: normal;
+    
   } 
 }
 
@@ -421,6 +446,8 @@ body{
 @media only screen and (max-width: 600px) {
   .product-price{ 
     font-size: 3vw;
+    margin-top: -10%;
+    margin-bottom: -1%;
   } 
 }
 
