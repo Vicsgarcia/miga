@@ -61,7 +61,7 @@ export default class Register extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     if (this.isValid()) {
-      authService.register(this.state.user)
+      authService.authenticate(this.state.user)
         .then(
           (user) => this.setState({ isRegistered: true }),
           (error) => {
@@ -120,4 +120,3 @@ export default class Register extends Component {
     );
   }
 }
-

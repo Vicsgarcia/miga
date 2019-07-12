@@ -5,7 +5,7 @@ const secure = require('../middlewares/secure.mid');
 const uploader = require('../configs/storage.config.js');
 
 authRouter.post('/register', auth.register);
-authRouter.post('/', auth.authenticate);
+authRouter.post('/profile', auth.authenticate);
 authRouter.get('/logout', auth.logout);
 
 /*

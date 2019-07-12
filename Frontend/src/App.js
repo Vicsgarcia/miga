@@ -8,7 +8,7 @@ import Carrito from './components/prod/Carrito';
 
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
-import Profile from './components/auth/Profile';
+import UserDetail from './components/auth/UserDetail';
 
 import Home from './components/misc/Home';
 import Footer from './components/misc/Footer';
@@ -37,7 +37,7 @@ class App extends Component {
               <Route exact path='/tiendas' component={Tiendas} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              <Route exact path='/profile/:id' component={Profile} />
+              <Route exact path='/profile' component={UserDetail} />
               <Route exact path="/carrito" component={Carrito} />
 
             </Switch>

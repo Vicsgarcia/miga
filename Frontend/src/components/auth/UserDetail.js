@@ -1,9 +1,7 @@
-
-
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AuthService from '../../services/AuthService';
-import Profile from './auth/Profile'
+//import User from './User'
 
 class UserDetail extends Component {
     state = {
@@ -17,8 +15,8 @@ class UserDetail extends Component {
       }
 
     componentWillMount() {
-        const { id } = this.props.match.params;
-        AuthService.getProfile(id)
+        const { user } = this.props.match.params;
+        AuthService.authenticate(user)
             .then(
                 user => {
                   console.log(user)

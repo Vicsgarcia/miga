@@ -3,10 +3,10 @@ import http from './BaseService';
 const register = (user) => http.post('/register', user)
   .then(res => Promise.resolve(res.data));
 
-const login = (id) => http.post(`/profile/${id}`, id)
-  .then(res => Promise.resolve(res.data));
+//const login = (id) => http.post(`/profile`, id)
+//  .then(res => Promise.resolve(res.data));
 
-const getProfile = (user) => http.get(`/profile/carrito`, user)
+const authenticate = (user) => http.post(`/profile`, user)
   .then(res => Promise.resolve(res.data));
 
 /*
@@ -28,8 +28,8 @@ const logout = () => {
 */
 export default {
   register,
-  login,
-  getProfile,/*
+  authenticate,
+  /*getProfile,
   updateProfile,
   logout*/
 }

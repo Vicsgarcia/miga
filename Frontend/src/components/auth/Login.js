@@ -65,7 +65,7 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { user } = this.state
-    AuthService.login(user)
+    AuthService.authenticate(user)
       .then(
         response => {
           //this.props.onUserLogin(response)
@@ -96,9 +96,9 @@ class Login extends Component {
   }
 
   render() {
-    const { isAuthenticated, errors, user, touch, id } =  this.state;
+    const { isAuthenticated, errors, user, touch } =  this.state;
     if (isAuthenticated) {
-      return (<Redirect to={`/profile/${id}`}/>)
+      return (<Redirect to={`/profile`}/>)
     }
 
     return (
