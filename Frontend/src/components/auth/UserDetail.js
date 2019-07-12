@@ -15,11 +15,11 @@ class UserDetail extends Component {
       }
 
     componentWillMount() {
-        const { user } = this.props.match.params;
-        AuthService.authenticate(user)
+        const { id } = this.props.match.params;
+        AuthService.getProfile(id)
             .then(
                 user => {
-                  console.log(user)
+                  //console.log(user)
                   this.setState({ user })},
                 error => {
                     console.error(error);

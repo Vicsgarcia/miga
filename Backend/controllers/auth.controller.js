@@ -14,12 +14,17 @@ module.exports.register = (req, res, next) => {
 
 module.exports.authenticate = (req, res, next) => {
   passport.authenticate('local-auth', (error, user, message) => {
-    if (error) next(error)
-    else if (!user) throw createError(401, message)
-    else {
+    if (error){
+       next(error)
+    } else if (!user){ 
+      createError(401, message)
+     } else {
       req.login(user, error => {
-        if (error) next(error)
-        else res.status(201).json(user)
+        if (error){ 
+          next(error)
+        }else {
+          res.status(201).json(user)
+        }
       })
     }
   })(req, res, next);
