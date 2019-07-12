@@ -11,6 +11,7 @@ function Home() {
     return (
         <div>
             <div>
+                
                 <Carousel />
             </div>
             <h2 className="home-text">Nuestra filosofía</h2>
