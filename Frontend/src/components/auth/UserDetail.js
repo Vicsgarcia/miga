@@ -1,8 +1,9 @@
 
+
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AuthService from '../../services/AuthService';
-import Profile from '../../auth/Profile'
+import Profile from './auth/Profile'
 
 class UserDetail extends Component {
     state = {

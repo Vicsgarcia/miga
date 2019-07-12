@@ -35,25 +35,25 @@ export default class Register extends Component {
   }
 
   handleChange = (event) => {
-    const { email, value } = event.target;
+    const { name, value } = event.target;
     this.setState({
-      email: {
+      user: {
         ...this.state.user,
-        [email]: value
+        [name]: value
       },
       errors: {
         ...this.state.errors,
-        [email]: validations[email] && validations[email](value)
+        [name]: validations[name] && validations[name](value)
       }
     })
   }
 
   handleBlur = (event) => {
-    const { email } = event.target;
+    const { name } = event.target;
     this.setState({
       touch: {
         ...this.state.touch,
-        [email]: true
+        [name]: true
       }
     })
   }
@@ -86,7 +86,7 @@ export default class Register extends Component {
   render() {
     const { isRegistered, errors, user, touch } =  this.state;
     if (isRegistered) {
-      return (<Redirect to="/login" />)
+      return (<Redirect to="/profile" />)
     }
 
    

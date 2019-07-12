@@ -24,7 +24,7 @@ class ProductDetail extends Component {
         ProdService.getProduct(id)
             .then(
                 product => {
-                  console.log(product)
+                  
                   this.setState({ product })},
                 error => {
                     console.error(error);
