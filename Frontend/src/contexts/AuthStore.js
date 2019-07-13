@@ -32,6 +32,7 @@ class AuthStore extends Component {
 }
 
 const withAuthConsumer = (WrappedComponent) => {
+  
   return () => (
     <AuthContext.Consumer>
       {(props) => (<WrappedComponent {...props} />)}

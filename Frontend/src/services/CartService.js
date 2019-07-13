@@ -1,8 +1,11 @@
 import http from './BaseService';
 
-const addToCart = (id) => http.post(`/products/${id}`)
-  .then(res => res.data)
+
+const addProduct = (product) => http.post() 
+.then(res => Promise.resolve(res.data));
+
 
 export default {
-    addToCart,
+  addProduct,
+  
 }

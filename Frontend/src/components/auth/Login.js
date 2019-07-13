@@ -118,9 +118,10 @@ class Login extends Component {
                 <div className="invalid-feedback">{errors.password}</div>
               </div>
 
-              <p className="mt-4"><small>Si no tienes cuenta crea una <Link to="/register">AQUÍ</Link></small></p>
+              
               <button className="login-button" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
             </form>
+            <p className="mt-4"><small>Si no tienes cuenta crea una <Link to="/register">AQUÍ</Link></small></p>
           </div>
 
         </div>
