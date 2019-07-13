@@ -33,7 +33,7 @@ app.use(passport.session());
 app.use('/', authRouter);
 app.use('/products', prodRouter);
 app.use('/products/:id', cartRouter);
-app.use('/profile/:id', authRouter);
+
 
 
 // 404

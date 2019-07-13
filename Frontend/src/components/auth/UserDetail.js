@@ -19,7 +19,7 @@ class UserDetail extends Component {
         AuthService.getProfile(id)
             .then(
                 user => {
-                  //console.log(user)
+                  console.log(user)
                   this.setState({ user })},
                 error => {
                     console.error(error);

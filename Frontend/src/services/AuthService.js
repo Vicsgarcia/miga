@@ -10,7 +10,7 @@ const authenticate = (user) => http.post(`/profile`, user)
   .then(res => Promise.resolve(res.data));
 
 
-const getProfile = (id) => http.post(`profile/${id}`)
+const getProfile = (id) => http.get(`/profile/${id}`)
   .then(res => Promise.resolve(res.data));
 
 
