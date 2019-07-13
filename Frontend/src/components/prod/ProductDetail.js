@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import ProdService from '../../services/ProdService';
+import {withAuthConsumer } from '../../contexts/AuthStore';
 
 class ProductDetail extends Component {
     state = {
@@ -37,6 +38,7 @@ class ProductDetail extends Component {
 
   render() {
     const { price, photo, shortDescription, longDescription, id } = this.state.product;
+    
     return (
         <div className="cards">
         <div className="product-card">
@@ -51,6 +53,7 @@ class ProductDetail extends Component {
               <button className="" form="register-form" type="submit" > 
                 <Link className="add-to-cart-button" to={`/product/${id}/carrito`}>Añadir al Carrito</Link>
               </button>              
+
             </div>
 
         </div>

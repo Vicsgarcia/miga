@@ -13,7 +13,6 @@ const Product = ({ name, price, photo, shortDescription, longDescription, id }) 
                 <Link to={`/product/${id}`}className="product-short" ><h5 className="product-h5" >{shortDescription}</h5></Link>
                 <h5 className="product-price">{price}€</h5>
                 <p className="product-long">{longDescription}</p>
-                
               </div>
 
           </div>

@@ -1,20 +1,17 @@
 const mongoose = require('mongoose');
 
 const carritoSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: 'Name is required',
-        unique: true,
-    },
-    price: {
-        type: Number,
-        required: 'Price is required',
-    },
     user: {
         type: mongoose.Types.ObjectId,
         ref: 'User',
         required: true
-    }
+    },
+    product: {
+        type: mongoose.Types.ObjectId,
+        ref: 'Product',
+        required: true
+    },
+    
 }, {
         timestamps: true,
         toJSON: {

@@ -25,11 +25,11 @@ function Header(props) {
                             <Link className="header-text  " to="/Login">LOGIN</Link>
                         </li>
                     )}
-                    {!isAuthenticated && (
+                    {/*!isAuthenticated && (
                     <li className="nav-menu">
                         <Link className="header-text  " to="/register">REGISTRO</Link>
                     </li>
-                    )}
+                    )*/}
                     {isAuthenticated && (
                     <li className="nav-menu">
                         <Link className="header-text  " to="/cuenta">CUENTA</Link>

@@ -86,7 +86,7 @@ export default class Register extends Component {
   render() {
     const { isRegistered, errors, user, touch } =  this.state;
     if (isRegistered) {
-      return (<Redirect to="/profile" />)
+      return (<Redirect to="/login" />)
     }
 
    
