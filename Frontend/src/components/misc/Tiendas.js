@@ -5,7 +5,7 @@ import React from 'react';
 function Tiendas() {
     return (
         <div>
-            <h2 className="texto tienda-title">Ven a visitarnos</h2>
+            
             <p className="texto tienda-parrafo">Lorem Ipsum is simply dummy texting Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
             <div className="tienda-rows">
                 <div className="tienda-first-row">

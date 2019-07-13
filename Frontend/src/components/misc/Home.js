@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel';
 import Philosophy from './Philosophy';
+import Tiendas from './Tiendas';
 import ProductList from '../prod/ProductsList';
 
 
@@ -21,6 +22,10 @@ function Home() {
             <div className="">
                 <h2 className="home-text">Nuestros Productos</h2>
                 <ProductList />
+            </div>
+            <h2 className="home-text">Conoce nuestras tiendas</h2>
+            <div className=''>
+                <Tiendas />
             </div>
         </div>
     )

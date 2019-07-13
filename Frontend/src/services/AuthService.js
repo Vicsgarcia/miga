@@ -12,6 +12,11 @@ const authenticate = (user) => http.post(`/profile`, user)
 
 const getProfile = (id) => http.get(`/profile/${id}`)
   .then(res => Promise.resolve(res.data));
+  
+const logout = () => {
+    return http.get('/logout')
+      .then(res => Promise.resolve(res.data));
+  }
 
 
 /*  const updateProfile = (user) => {
@@ -31,8 +36,9 @@ const logout = () => {
 export default {
   register,
   authenticate,
-  getProfile
+  getProfile,
+  logout
   /*getProfile,
   updateProfile,
-  logout*/
+  */
 }

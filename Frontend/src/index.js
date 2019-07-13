@@ -3,13 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App.js';
 import * as serviceWorker from './serviceWorker';
+import {AuthStore} from './contexts/AuthStore'
+
 
 
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+        <AuthStore>
+            <App />
+        </AuthStore>
     </BrowserRouter>, 
     document.getElementById('root')
 );

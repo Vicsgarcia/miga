@@ -33,7 +33,8 @@ class Login extends Component {
     },
     errors: {},
     touch: {},
-    isAuthenticated: false
+    
+    
   }
 
 
@@ -69,11 +70,7 @@ class Login extends Component {
     AuthService.authenticate(user)
       .then(
         response => {
-          //this.props.onUserLogin(response)
-          this.setState({ 
-            isAuthenticated: true,
-            id: response.id
-          })
+          this.props.onUserLogin(response)
         },
         error => {
           this.setState({
@@ -97,9 +94,11 @@ class Login extends Component {
   }
 
   render() {
-    const { isAuthenticated, errors, user, touch, id } =  this.state;
+    console.log(this.props)
+    const { errors, user, touch, id } =  this.state;
+    const isAuthenticated = this.props.isAuthenticated()
     if (isAuthenticated) {
-      return (<Redirect to={`/profile/${id}`}/>)
+      return (<Redirect to={`/profile/${this.props.user.id}`}/>)
     }
 
     return (

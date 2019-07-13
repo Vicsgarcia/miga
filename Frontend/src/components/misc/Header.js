@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import {withAuthConsumer } from '../../contexts/AuthStore';
 
 
 
 
-function Header() {
+function Header(props) {
+    const isAuthenticated = props.isAuthenticated()
     return (
         <nav className="navbar header-color header">
             <div className="logo-box">
@@ -18,18 +20,28 @@ function Header() {
                     <li className="nav-menu">
                         <Link className="header-text  " to="/productos">PRODUCTOS</Link>
                     </li>
-                    <li className="nav-menu">
-                        <Link className="header-text  " to="/tiendas">TIENDAS</Link>
-                    </li>
-                    <li className="nav-menu">
-                        <Link className="header-text  " to="/Login">LOGIN</Link>
-                    </li>
+                    {!isAuthenticated && (
+                        <li className="nav-menu">
+                            <Link className="header-text  " to="/Login">LOGIN</Link>
+                        </li>
+                    )}
+                    {!isAuthenticated && (
                     <li className="nav-menu">
                         <Link className="header-text  " to="/register">REGISTRO</Link>
                     </li>
+                    )}
+                    {isAuthenticated && (
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/cuenta">CUENTA</Link>
+                    </li>
+                    )}
+                    {isAuthenticated && (
                     <li className="nav-menu">
                         <Link className="header-text  " to="/carrito">CARRITO</Link>
                     </li>
+                    )}
+
+                    
                 </ul>
             </div>
         </nav>
@@ -37,4 +49,4 @@ function Header() {
 };
 
 
-export default Header
+export default withAuthConsumer(Header)

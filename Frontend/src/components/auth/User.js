@@ -7,6 +7,7 @@ const User = ({ email, id }) => {
       <div>
           <h1>{email}</h1>
           <h1>{id}</h1>
+          <button className="" onClick={this.handleLogout}> logout</button>
       </div>
 
   )

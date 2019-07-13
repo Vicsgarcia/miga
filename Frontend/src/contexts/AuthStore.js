@@ -8,7 +8,7 @@ class AuthStore extends Component {
     user: JSON.parse(localStorage.getItem(CURRENT_USER_KEY) || '{}')
   }
 
-  handleUserChange = (user) => {
+  handleUserLogin = (user) => {
     this.setState({ user })
     if (user) localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user))
     else localStorage.removeItem(CURRENT_USER_KEY)

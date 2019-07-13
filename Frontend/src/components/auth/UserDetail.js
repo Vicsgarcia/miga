@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import AuthService from '../../services/AuthService';
+import { AuthStore, AuthContext, withAuthConsumer } from '../../contexts/AuthStore';
 //import User from './User'
 
 class UserDetail extends Component {
@@ -15,11 +17,11 @@ class UserDetail extends Component {
       }
 
     componentWillMount() {
-        const { id } = this.props.match.params;
+        const { id } = this.props.user.id;
         AuthService.getProfile(id)
             .then(
                 user => {
-                  console.log(user)
+                  
                   this.setState({ user })},
                 error => {
                     console.error(error);
@@ -30,12 +32,22 @@ class UserDetail extends Component {
             )
     }
 
+    handleLogout = () => {
+        AuthService.logout()
+          .then(() => this.props.onUserLogin(null))
+      }
+    
+
   render() {
     const { email, id} = this.state.user;
+    if (!this.props.isAuthenticated()) {
+        return (<Redirect to={`/`}/>)
+      }
     return (
         <div>
             <h1>{email}</h1>
             <h1>{id}</h1>
+            <button className="" onClick={this.handleLogout}> logout</button>
         </div>
     )
         
@@ -43,4 +55,4 @@ class UserDetail extends Component {
   }
 }
 
-export default UserDetail;
+export default withAuthConsumer(UserDetail);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
+import { AuthStore, AuthContext, withAuthConsumer } from './contexts/AuthStore';
 
 import ProductList from './components/prod/ProductsList';
 import ProductDetail from './components/prod/ProductDetail';
@@ -18,11 +19,12 @@ import Header from './components/misc/Header';
 
 
 class App extends Component {
-
+  
 
   render() {
-
+    console.log(this.props)
     return (
+      
       <div className="App">
         <div className="header">
           <Header />              
@@ -34,10 +36,12 @@ class App extends Component {
               <Route exact path='/productos' component={ProductList} />
               <Route exact path='/product/:id' component={ProductDetail} />
               <Route exact path='/product/:id/carrito' component={Carrito} />
-              <Route exact path='/tiendas' component={Tiendas} />
-              <Route exact path="/register" component={Register} />
+              
               <Route exact path="/login" component={Login} />
               <Route exact path="/profile/:id" component={UserDetail} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/cuenta" component={UserDetail} />
+              
               <Route exact path="/carrito" component={Carrito} />
 
             </Switch>
@@ -49,4 +53,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthConsumer(App);
