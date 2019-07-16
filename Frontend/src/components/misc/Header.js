@@ -32,14 +32,16 @@ function Header(props) {
                     )*/}
                     {isAuthenticated && (
                     <li className="nav-menu">
-                        <Link className="header-text  " to="/cuenta">CUENTA</Link>
-                    </li>
-                    )}
-                    {isAuthenticated && (
-                    <li className="nav-menu">
                         <Link className="header-text  " to="/carrito">CARRITO</Link>
                     </li>
                     )}
+
+                    {isAuthenticated && (
+                    <li className="nav-menu">
+                        <Link className="header-text  " to="/cuenta">CUENTA</Link>
+                    </li>
+                    )}
+                    
 
                     
                 </ul>

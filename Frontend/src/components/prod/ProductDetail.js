@@ -1,8 +1,8 @@
-
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import ProdService from '../../services/ProdService';
-import { withAuthConsumer, AuthContext } from '../../contexts/AuthStore';
+import { AuthContext } from '../../contexts/AuthStore';
 
 
 class ProductDetail extends Component {

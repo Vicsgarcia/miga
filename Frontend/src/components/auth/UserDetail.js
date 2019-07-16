@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 import { Redirect } from 'react-router-dom'
 import AuthService from '../../services/AuthService';
-import { AuthStore, AuthContext, withAuthConsumer } from '../../contexts/AuthStore';
+import { withAuthConsumer } from '../../contexts/AuthStore';
 //import User from './User'
 
 class UserDetail extends Component {
