@@ -267,7 +267,7 @@ body{
   display: block;
   font-family: "Futura",sans-serif;
   color: #56260B;
-  font-size: 1vw;
+  font-size: 1.5vw;
   line-height: 1.2rem;
   text-align: center;
 }
@@ -285,8 +285,8 @@ body{
   display: block;
   font-family: "Futura",sans-serif;
   color: rgba(86, 38, 11, 0.605);
-  font-size: 0.9vw;
-  line-height: 1rem;
+  font-size: 1.5vw;
+  line-height: 1.2rem;
   text-align: left;
 }
 
@@ -319,7 +319,24 @@ body{
   } 
 }
 
+/*STRIPE*/
 
+
+.stripe{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  margin-top:10%;
+  margin-bottom:12%;
+  border: 2px solid;
+  
+}
+@media only screen and (max-width: 600px) {
+  .stripe{ 
+    width: 95%;
+    height: 110%;
+  } 
+}
 
 /*PRODUCTOS*/
 

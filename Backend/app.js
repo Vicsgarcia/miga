@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const stripe = require("stripe")("pk_live_ZlRHbKROvzja92T0HooA3VWQ");
 
 //require configsp
 require('./configs/db.config');
@@ -17,9 +18,14 @@ const cors = require('./configs/cors.config');
 const authRouter = require('./routes/auth.routes');
 const prodRouter = require('./routes/prod.routes');
 const cartRouter = require('./routes/cart.routes');
+const payRouter = require('./routes/pay.routes');
+
+
 
 
 const app = express();
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -29,10 +35,17 @@ app.use(cors);
 app.use(session);
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(require("body-parser").text());
+
 
 app.use('/', authRouter);
 app.use('/products', prodRouter);
 app.use('/products/:id', cartRouter);
+//app.use('/charge', payRouter)
+
+/*STRIPE*/
+
+
 
 
 

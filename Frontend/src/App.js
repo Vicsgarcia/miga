@@ -5,7 +5,7 @@ import { withAuthConsumer } from './contexts/AuthStore';
 
 import ProductList from './components/prod/ProductsList';
 import ProductDetail from './components/prod/ProductDetail';
-//import Carrito from './components/prod/Carrito';
+import Carrito from './components/prod/Carrito';
 
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -41,7 +41,7 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/cuenta" component={UserDetail} />
               
-              <Route exact path="/carrito" component={Home} />
+              <Route exact path="/charge" component={Carrito} />
 
             </Switch>
           </div>
