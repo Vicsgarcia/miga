@@ -44,10 +44,22 @@ class UserDetail extends Component {
         return (<Redirect to={`/`}/>)
       }
     return (
-        <div>
-            <h1>{email}</h1>
-            <h1>{id}</h1>
-            <button className="" onClick={this.handleLogout}> logout</button>
+        <div className="profile-card">
+            <h1 className="profile-title">Bienvenido a tu perfil</h1>
+            <h3 className="profile-subtitle"> Desde aquí podras:</h3>
+            <ul className="profile-list">
+              <li>Ver tus datos de contacto</li>
+              <li>Salir de tu cuenta</li>
+            </ul>
+            <p className="email-text-title"> Tu email: </p>
+            <p className="email-text">{email}</p>
+
+            <p className="email-text-title">Tu numero de usuario:</p>
+            <p className="email-text">{id}</p>
+
+            <p className="email-text-title">¿Quieres salir de tu cuenta?</p>
+            <button className="login-button" onClick={this.handleLogout}> Cerrar Sesión</button>
+        
         </div>
     )
         

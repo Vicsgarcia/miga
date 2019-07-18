@@ -102,28 +102,28 @@ class Login extends Component {
     }
 
     return (
-      <div className="box mx-auto">
-        <div className="row">
-          <div className="col-15">
-            <h3>Entra en tu cuenta</h3>
-            <form id="login-form" className="mt-4" onSubmit={this.handleSubmit}>
-              <div className="form-group">
-                <label>Aquí tu email</label>
-                <input type="email" name="email" className={`form-control ${touch.email && errors.email ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.email} />
-                <div className="invalid-feedback">{errors.email}</div>
-              </div>
-              <div className="form-group">
-                <label>Y aquí la contraseña</label>
-                <input type="password" name="password" className={`form-control ${touch.password && errors.password ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
-                <div className="invalid-feedback">{errors.password}</div>
-              </div>
-
-              
-              <button className="login-button" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
-            </form>
-            <p className="mt-4"><small>Si no tienes cuenta crea una <Link to="/register">AQUÍ</Link></small></p>
+      <div className="login-card">
+        <h3 className="login-title">Entra en tu cuenta</h3>
+        <form id="login-form" className="login-input" onSubmit={this.handleSubmit}>
+          <div className="form-group">
+            <label className="login-email-text">Aquí tu email</label>
+            <input type="email" name="email" className="login-email-input" onChange={this.handleChange} onBlur={this.handleBlur} value={user.email} />
+            <div className="invalid-feedback">{errors.email}</div>
+          </div>
+          <div className="form-group">
+            <label className="login-password-text">Y aquí la contraseña</label>
+            <input type="password" name="password" className="login-password-input" onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
+            <div className="invalid-feedback">{errors.password}</div>
           </div>
 
+          <div className="login-register-button">
+          <button className="login-button" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
+          </div>
+        </form>
+        < hr className="line"/>
+        <p className="login-to-register">¿No tienes cuenta? </p>
+        <div className="login-register-button">
+        <Link to="/register" ><button className="login-register-button">Regístrate</button></Link>
         </div>
       </div>
     );

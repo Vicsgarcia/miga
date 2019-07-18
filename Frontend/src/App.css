@@ -784,11 +784,18 @@ body{
   } 
 }
 
-
+.shop-div{
+  margin-top:5%;
+}
 .shop-box{
   margin: 15px 0 0 0;
   padding: 0px;
-  
+}
+
+.shop-line{
+  border: 1px solid #56260B;
+  border-radius: 5px;
+  width:75%;
 
 }
 
@@ -811,3 +818,194 @@ body{
   } 
 }
 
+
+
+/*LOGIN*/
+
+.homeWindows{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.login-card{
+  
+  align-items: center;
+  padding:5%;
+  
+  margin-top:2%;
+  margin-bottom:2%;
+  
+  
+}
+
+
+
+.login-title{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  text-decoration:underline;
+  
+  
+}
+
+.login-input{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.login-email-text{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  padding-bottom:5%;
+
+}
+.login-email-input{
+  width:200px;
+  margin-bottom:10%;
+}
+
+.form-group{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+
+}
+
+.login-to-register{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.login-password-text{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  padding-bottom:5%;
+
+}
+
+.login-password-input{
+  width: 200px;
+  margin-bottom:10%;
+}
+
+.login-to-register{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  text-align: center;
+  
+  
+}
+
+.login-to-register-link{
+  margin:5%;
+
+}
+
+.login-register-button{
+  text-align: center;
+  background-color: #56260B;
+  margin:1%;
+  border-radius: 4px;
+  border: 2px solid #56260B;
+  color: white;
+}
+
+
+.line{
+  border: 1px solid #56260B;
+  border-radius: 5px;
+  margin-top:15%;
+}
+
+
+/*PROFILE*/
+
+.profile-card{
+  margin-top: 15%;
+  margin-bottom:15%;
+}
+
+
+
+.profile-title{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 2.5vw;
+  line-height: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content :space-around;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-title{ 
+    font-size: 5vw;
+  } 
+}
+
+.profile-subtitle{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1.5vw;
+  line-height: 1.5rem;
+  text-align: center;
+  display: flex;
+  justify-content :space-around;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-subtitle{ 
+    font-size: 4vw;
+  } 
+}
+
+.profile-list{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1.2vw;
+  line-height: 1.3rem;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .profile-list{ 
+    font-size: 3vw;
+  } 
+}
+
+.email-text-title{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1.5vw;
+  line-height: 1.3rem;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .email-text-title{ 
+    font-size: 4vw;
+  } 
+}
+
+.email-text{
+  font-family: "Futura",sans-serif;
+  color: #56260B;
+  font-size: 1.2vw;
+  line-height: 1.3rem;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .email-text{ 
+    font-size: 3.5vw;
+  } 
+}
