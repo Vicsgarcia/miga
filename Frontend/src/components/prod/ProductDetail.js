@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import ProdService from '../../services/ProdService';
+import CartService from '../../services/CartService';
 import { AuthContext } from '../../contexts/AuthStore';
 
 
@@ -38,16 +39,31 @@ class ProductDetail extends Component {
       )
   }
 
+  addToCart = () => {
+    const product = this.props.match.params.id;
+
+    CartService.addToCart(product)
+      .then(
+        user => {
+          alert("done")
+        },
+        error => {
+          console.error(error);
+          if (error.response && error.response.status === 404) {
+            this.setState({ shouldRedirect: true })
+          }
+        }
+      )
+  }
+
+  
+
   render() {
     const { price, photo, shortDescription, longDescription, id } = this.state.product;
-    
-
-
-
-
+  
     return (
       <AuthContext.Consumer>
-        {({ isAuthenticated }) => (
+        {({ isAuthenticated, user }) => (
           <div className="cards">
                 <img src={photo} className="product-detail-photo" alt="Foto de producto" />
               <div className="product-text">
@@ -55,8 +71,7 @@ class ProductDetail extends Component {
                 <h5 className="product-detail-price">{price}€</h5>
                 <p className="product-detail-long">{longDescription}</p>
                 {isAuthenticated() && (
-                  
-                    <Link className="add-to-cart-button" to={`/carrito/product/${id}`}><button className="login-button"  type="submit" >Añadir al carrito</button></Link>
+                  <button className="add-to-cart-button" form="login-form" type="submit" onClick={() => this.addToCart()} /*disabled={!this.isValid()}*/> Añadir al Carrito</button>
                 )}
                 <div className="product-detail-button">
                 {!isAuthenticated() && (

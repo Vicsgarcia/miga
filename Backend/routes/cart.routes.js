@@ -4,7 +4,7 @@ const cart = require ('../controllers/cart.controller')
 
 
 
-cartRouter.post('/product/:id', cart.addToCart)
+cartRouter.post('/add', cart.addToCart)
 
 
 
