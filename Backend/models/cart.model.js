@@ -1,16 +1,20 @@
 const mongoose = require('mongoose');
 
 const carritoSchema = new mongoose.Schema({
-    user: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     product: {
         type: mongoose.Types.ObjectId,
         ref: 'Product',
         required: true
     },
+    amounts: [{
+        type: Number,
+      }],
+    status: {
+        type: String,
+        enum: ["pendiente", "completado", "en proceso"],
+        default: "pendiente"
+      },
+
     
 }, {
         timestamps: true,

@@ -40,6 +40,7 @@ class ProductDetail extends Component {
 
   render() {
     const { price, photo, shortDescription, longDescription, id } = this.state.product;
+    
 
 
 
@@ -54,7 +55,8 @@ class ProductDetail extends Component {
                 <h5 className="product-detail-price">{price}€</h5>
                 <p className="product-detail-long">{longDescription}</p>
                 {isAuthenticated() && (
-                    <Link className="add-to-cart-button" to={`/product/${id}/carrito`}><button className="login-button" form="register-form" type="submit" >Añadir al carrito</button></Link>
+                  
+                    <Link className="add-to-cart-button" to={`/carrito/product/${id}`}><button className="login-button"  type="submit" >Añadir al carrito</button></Link>
                 )}
                 <div className="product-detail-button">
                 {!isAuthenticated() && (

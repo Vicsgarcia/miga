@@ -4,8 +4,9 @@ const cart = require ('../controllers/cart.controller')
 
 
 
-cartRouter.post('/carrito', cart.post)
+cartRouter.post('/product/:id', cart.addToCart)
 
 
 
 module.exports = cartRouter;
+
