@@ -94,11 +94,11 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props)
+  
     const { errors, user, touch, id } =  this.state;
     const isAuthenticated = this.props.isAuthenticated()
     if (isAuthenticated) {
-      return (<Redirect to={`/profile/${this.props.user.id}`}/>)
+      return (<Redirect to={`/productos`}/>)
     }
 
     return (

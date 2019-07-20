@@ -1,4 +1,5 @@
 const Cart = require('../models/cart.model');
+const createError = require('http-errors');
 
 module.exports.addToCart = async (req, res, next) => {
   try {
@@ -20,4 +21,16 @@ module.exports.addToCart = async (req, res, next) => {
   } catch(error) {
     next(error)
   }
+}
+
+module.exports.getCart = (req, res, next) => {
+  Cart.findOne({ user: req.user._id })
+    .then(cart => {
+      if (cart) {
+        res.json(cart)
+      } else {
+        createError(401, message)
+      }
+    })
+    .catch(next)
 }

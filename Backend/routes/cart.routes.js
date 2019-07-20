@@ -5,6 +5,7 @@ const cart = require ('../controllers/cart.controller')
 
 
 cartRouter.post('/add', cart.addToCart)
+cartRouter.get('/', cart.getCart)
 
 
 
