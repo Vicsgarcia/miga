@@ -5,7 +5,7 @@ import React from 'react';
 function Carousel() {
     return (
         <div>   
-            <img src="https://i.ibb.co/dbQVMMv/portada.jpg"  alt="foto de portada" className="carousel-photo" />   
+            <img src="https://i.ibb.co/0C5422P/Header.jpg"  alt="foto de portada" className="carousel-photo" />   
         </div>
     )
 };

@@ -1,5 +1,5 @@
 .App{
-  background-color: #FBE4A1;
+  background-color:white;
   width: 100%;
 }
 
@@ -31,7 +31,7 @@ body{
   border-bottom-width: 1px;
   border-bottom-style: solid;
   transform: translateZ(0);
-  background-color: #56260B;
+  background-color:#56260b00;
   box-shadow: 0 0 5px 2px rgba(0,0,0,.33);
 }
 
@@ -49,8 +49,19 @@ body{
 .navbar{
   display: flex;
   align-items: row;
-  z-index: 1 !important;
   align-items: right;
+  transition: .4s 0ms;
+  background:#56260b00;
+  border-bottom: 1px solid #ccc;
+  height: 57px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  white-space: nowrap;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  font-weight: 500;
    
 }
 
@@ -134,8 +145,7 @@ body{
 @media only screen and (max-width: 600px) {
   .logo-box {
     align-items: center;
-    margin-top:7.5%;
-    margin-left:7.5%;
+    
   }
 }
 

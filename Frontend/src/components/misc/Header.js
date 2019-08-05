@@ -10,7 +10,7 @@ function Header(props) {
     return (
         <nav className="navbar header-color header">
             <div className="logo-box">
-                <Link className="header-text " to="/"> <img src="https://i.ibb.co/k269vzR/whitelogo.png" className="header-logo" alt="logo miga bakery" /> </Link>
+                <Link className="header-text" to="/"> NeedanIron </Link>
             </div>
             <div className=" header-buttons" id="navbarText">
                 <ul className="nav-menu">
